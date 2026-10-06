@@ -1,0 +1,4040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ÉLANE BEAUTY LOUNGE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cream:#f8f5ef;
+  --ivory:#fffdf9;
+  --rose:#c9a6a0;
+  --rose-dark:#9b716b;
+  --gold:#b89b69;
+  --dark:#292321;
+  --muted:#766e69;
+  --line:#e8dfd8;
+  --soft:#f2ebe6;
+  --white:#fff;
+  --success:#718c78;
+  --danger:#a65f5f;
+  --shadow:0 18px 50px rgba(50,35,30,.10);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--ivory);
+  color:var(--dark);
+  line-height:1.6;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,253,249,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(80,60,50,.08);
+}
+
+.nav-inner{
+  max-width:1250px;
+  margin:auto;
+  min-height:78px;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+  letter-spacing:3px;
+  font-weight:600;
+}
+
+.logo small{
+  display:block;
+  font-family:"DM Sans",sans-serif;
+  font-size:8px;
+  letter-spacing:3px;
+  text-align:center;
+  color:var(--gold);
+  margin-top:-7px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:13px;
+}
+
+.nav-links a{
+  color:#514944;
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--rose-dark);
+}
+
+.nav-book{
+  padding:11px 18px;
+  border:1px solid var(--dark);
+  background:var(--dark);
+  color:white!important;
+}
+
+.nav-icons{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.icon-btn{
+  border:0;
+  background:transparent;
+  font-size:20px;
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+  top:-5px;
+  right:-6px;
+  background:var(--rose-dark);
+  color:white;
+  font-size:9px;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mobile-menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  font-size:25px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  background:var(--cream);
+}
+
+.hero-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:70px 8%;
+}
+
+.eyebrow{
+  color:var(--rose-dark);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:76px;
+  line-height:.9;
+  font-weight:500;
+  max-width:650px;
+  margin-bottom:25px;
+}
+
+.hero h1 em{
+  color:var(--rose-dark);
+  font-style:italic;
+}
+
+.hero p{
+  max-width:520px;
+  color:var(--muted);
+  font-size:15px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  border:1px solid var(--dark);
+  background:var(--dark);
+  color:white;
+  padding:13px 23px;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--dark);
+}
+
+.hero-image{
+  min-height:650px;
+  background:
+  linear-gradient(rgba(30,20,15,.08),rgba(30,20,15,.08)),
+  url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85")
+  center/cover;
+}
+
+/* TRUST */
+
+.trust{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-bottom:1px solid var(--line);
+}
+
+.trust-item{
+  padding:22px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.trust-item:last-child{
+  border:0;
+}
+
+.trust strong{
+  display:block;
+  font-family:"Cormorant Garamond",serif;
+  font-size:24px;
+}
+
+.trust span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+/* SECTIONS */
+
+.section{
+  max-width:1250px;
+  margin:auto;
+  padding:90px 28px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:40px;
+  gap:25px;
+}
+
+.section-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:52px;
+  line-height:1;
+  font-weight:500;
+}
+
+.section-text{
+  color:var(--muted);
+  max-width:500px;
+}
+
+/* SERVICES */
+
+.filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.filter{
+  border:1px solid var(--line);
+  background:white;
+  padding:9px 16px;
+  color:var(--muted);
+}
+
+.filter.active{
+  background:var(--dark);
+  color:white;
+  border-color:var(--dark);
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service-card{
+  background:white;
+  border:1px solid var(--line);
+  padding:25px;
+  transition:.25s;
+}
+
+.service-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.service-top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.service-category{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:9px;
+  color:var(--rose-dark);
+}
+
+.service-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:28px;
+  font-weight:500;
+  margin:12px 0 7px;
+}
+
+.service-card p{
+  color:var(--muted);
+  font-size:13px;
+  min-height:60px;
+}
+
+.price{
+  font-size:17px;
+  font-weight:600;
+  margin:15px 0;
+}
+
+.duration{
+  color:var(--muted);
+  font-size:11px;
+}
+
+.card-actions{
+  display:flex;
+  gap:7px;
+  margin-top:17px;
+}
+
+.small-btn{
+  flex:1;
+  padding:10px;
+  border:1px solid var(--dark);
+  background:var(--dark);
+  color:white;
+  font-size:12px;
+}
+
+.small-btn.alt{
+  background:white;
+  color:var(--dark);
+}
+
+/* OFFER */
+
+.offer{
+  background:var(--dark);
+  color:white;
+  padding:65px 8%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+}
+
+.offer h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:57px;
+  line-height:1;
+  font-weight:500;
+}
+
+.offer p{
+  color:#cfc7c1;
+  margin:18px 0;
+}
+
+.offer-box{
+  border:1px solid rgba(255,255,255,.2);
+  padding:30px;
+}
+
+.offer-box h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+}
+
+.offer-price{
+  font-size:30px;
+  margin:10px 0;
+}
+
+.offer .btn{
+  background:white;
+  color:var(--dark);
+  border-color:white;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.gallery-item{
+  height:300px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+}
+
+.gallery-item:first-child{
+  grid-column:span 2;
+  grid-row:span 2;
+  height:612px;
+}
+
+.gallery-item img{
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.05);
+}
+
+.gallery-label{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  background:rgba(255,255,255,.9);
+  padding:6px 10px;
+  font-size:10px;
+}
+
+/* ABOUT */
+
+.about{
+  background:var(--cream);
+}
+
+.about-grid{
+  max-width:1250px;
+  margin:auto;
+  padding:90px 28px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about-image{
+  height:570px;
+  background:url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=85") center/cover;
+}
+
+.about-copy h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:55px;
+  font-weight:500;
+  line-height:1;
+  margin-bottom:20px;
+}
+
+.about-copy p{
+  color:var(--muted);
+  margin-bottom:17px;
+}
+
+.about-points{
+  margin-top:25px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.about-point{
+  border-top:1px solid var(--line);
+  padding-top:12px;
+  font-size:12px;
+}
+
+/* REVIEWS */
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.review{
+  border:1px solid var(--line);
+  padding:27px;
+  background:white;
+}
+
+.stars{
+  color:var(--gold);
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+.review p{
+  color:var(--muted);
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  line-height:1.3;
+}
+
+.review-name{
+  margin-top:20px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:var(--soft);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.contact-info h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:55px;
+  font-weight:500;
+  line-height:1;
+  margin-bottom:20px;
+}
+
+.contact-info p{
+  color:var(--muted);
+}
+
+.contact-details{
+  margin-top:30px;
+  display:grid;
+  gap:17px;
+}
+
+.contact-detail strong{
+  display:block;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:3px;
+}
+
+.contact-detail span{
+  color:var(--muted);
+}
+
+.map-box{
+  min-height:350px;
+  background:
+  linear-gradient(rgba(60,45,35,.12),rgba(60,45,35,.12)),
+  url("https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=85")
+  center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.map-inner{
+  background:white;
+  padding:25px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.map-inner h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:27px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#211d1b;
+  color:white;
+  padding:45px 28px 25px;
+}
+
+.footer-inner{
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-logo{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+  letter-spacing:3px;
+}
+
+.footer p{
+  color:#aaa19b;
+  font-size:12px;
+  margin-top:5px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+  font-size:12px;
+  color:#c9c0bb;
+}
+
+.footer-bottom{
+  max-width:1250px;
+  margin:35px auto 0;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.1);
+  font-size:10px;
+  color:#8f8782;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:900;
+  width:53px;
+  height:53px;
+  border-radius:50%;
+  background:#607c68;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+}
+
+/* MODALS */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(25,20,17,.65);
+  backdrop-filter:blur(7px);
+  z-index:2000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(650px,100%);
+  max-height:92vh;
+  overflow:auto;
+  background:var(--ivory);
+  padding:35px;
+  position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+
+.modal-large{
+  width:min(950px,100%);
+}
+
+.close{
+  position:absolute;
+  right:18px;
+  top:15px;
+  border:0;
+  background:none;
+  font-size:25px;
+}
+
+.modal-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:40px;
+  font-weight:500;
+  line-height:1;
+  margin-bottom:7px;
+}
+
+.modal-sub{
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:25px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.form-group{
+  margin-bottom:14px;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+.form-group label{
+  display:block;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  border:1px solid var(--line);
+  background:white;
+  padding:12px;
+  outline:none;
+}
+
+.form-group textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--rose-dark);
+}
+
+.slot-title{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin:15px 0 8px;
+}
+
+.slots{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+}
+
+.slot{
+  border:1px solid var(--line);
+  background:white;
+  padding:9px 4px;
+  font-size:11px;
+}
+
+.slot:hover{
+  border-color:var(--dark);
+}
+
+.slot.selected{
+  background:var(--dark);
+  color:white;
+  border-color:var(--dark);
+}
+
+.slot.disabled{
+  background:#eee;
+  color:#aaa;
+  text-decoration:line-through;
+  cursor:not-allowed;
+}
+
+/* SERVICE DETAIL */
+
+.detail-price{
+  font-size:28px;
+  margin:15px 0;
+}
+
+.detail-list{
+  margin:20px 0;
+  padding-left:20px;
+  color:var(--muted);
+}
+
+.detail-list li{
+  margin:7px 0;
+}
+
+/* CONFIRMATION */
+
+.confirmation{
+  text-align:center;
+}
+
+.confirm-icon{
+  width:65px;
+  height:65px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:#e4eee6;
+  color:var(--success);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.reference{
+  background:var(--soft);
+  padding:13px;
+  margin:20px 0;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+/* GALLERY MODAL */
+
+.gallery-preview{
+  position:relative;
+  background:#181514;
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gallery-preview img{
+  max-height:75vh;
+  width:auto;
+  max-width:100%;
+  object-fit:contain;
+}
+
+.gallery-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.9);
+  font-size:20px;
+}
+
+.gallery-arrow.left{
+  left:15px;
+}
+
+.gallery-arrow.right{
+  right:15px;
+}
+
+.gallery-counter{
+  text-align:center;
+  background:#181514;
+  color:white;
+  padding:10px;
+  font-size:11px;
+}
+
+/* WISHLIST */
+
+.wishlist-list{
+  display:grid;
+  gap:10px;
+}
+
+.wish-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border:1px solid var(--line);
+  background:white;
+  padding:15px;
+}
+
+.wish-item strong{
+  display:block;
+}
+
+.wish-item span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+/* ADMIN */
+
+.admin{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:#f5f1ec;
+  display:none;
+  overflow:auto;
+}
+
+.admin.show{
+  display:block;
+}
+
+.admin-nav{
+  background:#282321;
+  color:white;
+  padding:18px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.admin-logo{
+  font-family:"Cormorant Garamond",serif;
+  font-size:28px;
+  letter-spacing:2px;
+}
+
+.admin-main{
+  max-width:1350px;
+  margin:auto;
+  padding:30px;
+}
+
+.admin-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.admin-head h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:45px;
+  font-weight:500;
+}
+
+.admin-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.admin-btn{
+  padding:10px 15px;
+  border:1px solid var(--dark);
+  background:white;
+}
+
+.admin-btn.dark{
+  background:var(--dark);
+  color:white;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin-bottom:25px;
+}
+
+.stat{
+  background:white;
+  border:1px solid var(--line);
+  padding:20px;
+}
+
+.stat span{
+  color:var(--muted);
+  text-transform:uppercase;
+  font-size:9px;
+  letter-spacing:1.5px;
+}
+
+.stat strong{
+  display:block;
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  margin-top:5px;
+}
+
+.admin-tabs{
+  display:flex;
+  gap:5px;
+  margin-bottom:15px;
+  overflow:auto;
+}
+
+.admin-tab{
+  border:1px solid var(--line);
+  background:white;
+  padding:10px 16px;
+  white-space:nowrap;
+}
+
+.admin-tab.active{
+  background:var(--dark);
+  color:white;
+}
+
+.admin-panel{
+  background:white;
+  border:1px solid var(--line);
+  padding:22px;
+}
+
+.admin-filters{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.admin-filters input,
+.admin-filters select{
+  border:1px solid var(--line);
+  padding:11px;
+}
+
+.table-wrap{
+  overflow:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:800px;
+}
+
+th,td{
+  border-bottom:1px solid var(--line);
+  padding:12px 9px;
+  text-align:left;
+  font-size:11px;
+}
+
+th{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--muted);
+}
+
+.status{
+  display:inline-block;
+  padding:5px 8px;
+  font-size:9px;
+  text-transform:uppercase;
+}
+
+.status.confirmed{
+  background:#e4eee6;
+  color:#54705c;
+}
+
+.status.cancelled{
+  background:#f3e3e3;
+  color:#915858;
+}
+
+.status.completed{
+  background:#eee8df;
+  color:#776551;
+}
+
+.action-btn{
+  border:1px solid var(--line);
+  background:white;
+  padding:6px 9px;
+  font-size:10px;
+  margin:2px;
+}
+
+.action-btn.danger{
+  color:var(--danger);
+}
+
+.management-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.management-card{
+  border:1px solid var(--line);
+  padding:18px;
+}
+
+.management-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:25px;
+  font-weight:500;
+}
+
+.management-card input{
+  width:100%;
+  border:1px solid var(--line);
+  padding:9px;
+  margin:9px 0;
+}
+
+/* LOGIN */
+
+.login-box{
+  width:min(420px,100%);
+}
+
+.login-logo{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.login-logo h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:42px;
+  font-weight:500;
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  right:20px;
+  bottom:85px;
+  z-index:5000;
+  background:#282321;
+  color:white;
+  padding:13px 17px;
+  font-size:12px;
+  box-shadow:var(--shadow);
+  transform:translateY(20px);
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+}
+
+.toast.show{
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:white;
+    padding:20px;
+    flex-direction:column;
+    align-items:stretch;
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .mobile-menu-btn{
+    display:block;
+  }
+
+  .nav-icons{
+    margin-left:auto;
+    margin-right:10px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-image{
+    min-height:450px;
+  }
+
+  .hero h1{
+    font-size:60px;
+  }
+
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-item:first-child{
+    grid-column:span 2;
+    height:450px;
+  }
+
+  .offer,
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .reviews{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .stats{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:600px){
+
+  .nav-inner{
+    padding:0 17px;
+  }
+
+  .logo{
+    font-size:25px;
+  }
+
+  .section{
+    padding:65px 18px;
+  }
+
+  .hero-content{
+    padding:60px 22px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero-image{
+    min-height:370px;
+  }
+
+  .trust{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .trust-item:nth-child(2){
+    border-right:0;
+  }
+
+  .trust-item:nth-child(-n+2){
+    border-bottom:1px solid var(--line);
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-title{
+    font-size:43px;
+    margin-bottom:15px;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .offer{
+    padding:50px 25px;
+  }
+
+  .offer h2{
+    font-size:45px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery-item{
+    height:200px;
+  }
+
+  .gallery-item:first-child{
+    height:410px;
+  }
+
+  .reviews{
+    grid-template-columns:1fr;
+  }
+
+  .about-grid{
+    padding:65px 18px;
+  }
+
+  .about-image{
+    height:400px;
+  }
+
+  .contact-grid{
+    gap:30px;
+  }
+
+  .contact-info h2{
+    font-size:45px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+
+  .modal-box{
+    padding:25px 18px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .slots{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .admin-main{
+    padding:18px;
+  }
+
+  .admin-head{
+    display:block;
+  }
+
+  .admin-head h1{
+    font-size:38px;
+    margin-bottom:15px;
+  }
+
+  .admin-filters{
+    grid-template-columns:1fr;
+  }
+
+  .management-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-preview{
+    min-height:380px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      ÉLANE
+      <small>BEAUTY LOUNGE</small>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#services" onclick="closeMobileMenu()">Services</a>
+      <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <a href="#" class="nav-book" onclick="openBooking();return false;">Book Appointment</a>
+    </div>
+
+    <div class="nav-icons">
+      <button class="icon-btn" onclick="openWishlist()">♡<span class="badge" id="wishBadge">0</span></button>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">Beauty • Care • Confidence</div>
+
+    <h1>
+      Beauty,<br>
+      <em>thoughtfully</em><br>
+      yours.
+    </h1>
+
+    <p>
+      A refined beauty experience designed around you.
+      From effortless everyday care to your most memorable occasions,
+      every detail is thoughtfully considered.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn" onclick="openBooking()">Book an Appointment</button>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+
+  </div>
+
+  <div class="hero-image"></div>
+
+</section>
+
+<!-- TRUST -->
+
+<div class="trust">
+
+  <div class="trust-item">
+    <strong>Personal</strong>
+    <span>Beauty consultations</span>
+  </div>
+
+  <div class="trust-item">
+    <strong>Curated</strong>
+    <span>Premium services</span>
+  </div>
+
+  <div class="trust-item">
+    <strong>Elegant</strong>
+    <span>Calm experience</span>
+  </div>
+
+  <div class="trust-item">
+    <strong>Made for You</strong>
+    <span>Thoughtful details</span>
+  </div>
+
+</div>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+  <div class="section-head">
+
+    <div>
+      <div class="eyebrow">Our Services</div>
+      <h2 class="section-title">Designed around you.</h2>
+    </div>
+
+    <p class="section-text">
+      Choose from carefully curated beauty services,
+      each designed to make you feel polished, comfortable and confident.
+    </p>
+
+  </div>
+
+  <div class="filters">
+    <button class="filter active" onclick="filterServices('All',this)">All</button>
+    <button class="filter" onclick="filterServices('Hair',this)">Hair</button>
+    <button class="filter" onclick="filterServices('Skin',this)">Skin</button>
+    <button class="filter" onclick="filterServices('Nails',this)">Nails</button>
+    <button class="filter" onclick="filterServices('Makeup',this)">Makeup</button>
+    <button class="filter" onclick="filterServices('Bridal',this)">Bridal</button>
+  </div>
+
+  <div class="services-grid" id="servicesGrid"></div>
+
+</section>
+
+<!-- OFFER -->
+
+<section class="offer">
+
+  <div>
+    <div class="eyebrow" style="color:#cdb995">The ÉLANE Edit</div>
+    <h2>A little more<br>care, together.</h2>
+    <p>
+      Curated combinations for those days when you want
+      a complete beauty reset.
+    </p>
+  </div>
+
+  <div class="offer-box">
+    <div class="eyebrow" style="color:#cdb995">Featured Package</div>
+    <h3>ÉLANE Glow Ritual</h3>
+    <p>Glow Facial + Classic Manicure + Blow Dry</p>
+    <div class="offer-price">₹2,299</div>
+    <button class="btn" onclick="bookPackage()">Book Package</button>
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+  <div class="section-head">
+
+    <div>
+      <div class="eyebrow">The ÉLANE Space</div>
+      <h2 class="section-title">A glimpse of the experience.</h2>
+    </div>
+
+    <p class="section-text">
+      Tap any image to explore the gallery.
+    </p>
+
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid"></div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="about-grid">
+
+    <div class="about-image"></div>
+
+    <div class="about-copy">
+
+      <div class="eyebrow">About ÉLANE</div>
+
+      <h2>Beauty should feel like time well spent.</h2>
+
+      <p>
+        ÉLANE BEAUTY LOUNGE is imagined as a space where beauty
+        feels personal rather than rushed.
+      </p>
+
+      <p>
+        Every service is designed around comfort, thoughtful
+        consultation and a polished final result.
+      </p>
+
+      <div class="about-points">
+
+        <div class="about-point">
+          <strong>01 — Consultation</strong><br>
+          Understanding what you want first.
+        </div>
+
+        <div class="about-point">
+          <strong>02 — Care</strong><br>
+          A calm and considered experience.
+        </div>
+
+        <div class="about-point">
+          <strong>03 — Detail</strong><br>
+          Finishing touches that matter.
+        </div>
+
+        <div class="about-point">
+          <strong>04 — You</strong><br>
+          Because every client is different.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="section" id="reviews">
+
+  <div class="section-head">
+
+    <div>
+      <div class="eyebrow">Client Notes</div>
+      <h2 class="section-title">Kind words.</h2>
+    </div>
+
+    <button class="btn btn-outline" onclick="openReviewModal()">Leave a Review</button>
+
+  </div>
+
+  <div class="reviews" id="reviewsGrid"></div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="section">
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <div class="eyebrow">Visit ÉLANE</div>
+
+        <h2>Come in.<br>Take a moment.</h2>
+
+        <p>
+          For appointments, consultations or questions,
+          we'd love to hear from you.
+        </p>
+
+        <div class="contact-details">
+
+          <div class="contact-detail">
+            <strong>Location</strong>
+            <span>Demo Studio, Your City</span>
+          </div>
+
+          <div class="contact-detail">
+            <strong>Phone</strong>
+            <span>+91 98765 43210</span>
+          </div>
+
+          <div class="contact-detail">
+            <strong>Email</strong>
+            <span>hello@elane.com</span>
+          </div>
+
+          <div class="contact-detail">
+            <strong>Opening Hours</strong>
+            <span>Mon – Sat · 10:00 AM – 7:00 PM</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="map-box">
+        <div class="map-inner">
+          <h3>ÉLANE BEAUTY LOUNGE</h3>
+          <p>Demo location · Your City</p>
+          <br>
+          <button class="btn" onclick="openBooking()">Book Your Visit</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      <div class="footer-logo">ÉLANE</div>
+      <p>Beauty, thoughtfully yours.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 ÉLANE BEAUTY LOUNGE · Demo website · Built as a portfolio prototype
+  </div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/919876543210?text=Hi%20ÉLANE%2C%20I%20would%20like%20to%20book%20an%20appointment."
+   target="_blank">
+  ◔
+</a>
+
+<!-- BOOKING MODAL -->
+
+<div class="modal" id="bookingModal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeBooking()">×</button>
+
+    <div class="eyebrow">Appointment</div>
+    <h2 class="modal-title">Reserve your time.</h2>
+    <p class="modal-sub">
+      Choose your service, preferred professional and available time.
+    </p>
+
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label>Service</label>
+        <select id="bookingService" onchange="bookingServiceChanged()"></select>
+      </div>
+
+      <div class="form-group">
+        <label>Beauty Professional</label>
+        <select id="bookingStaff" onchange="renderSlots()"></select>
+      </div>
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="bookingDate" onchange="renderSlots()">
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" id="bookingPhone" placeholder="+91">
+      </div>
+
+      <div class="form-group full">
+        <label>Your Name</label>
+        <input type="text" id="bookingName" placeholder="Full name">
+      </div>
+
+      <div class="form-group full">
+        <label>Email</label>
+        <input type="email" id="bookingEmail" placeholder="you@example.com">
+      </div>
+
+    </div>
+
+    <div class="slot-title">Available Time</div>
+
+    <div class="slots" id="slots"></div>
+
+    <div class="form-group" style="margin-top:18px">
+      <label>Notes / Request</label>
+      <textarea id="bookingNote" placeholder="Anything you'd like us to know?"></textarea>
+    </div>
+
+    <button class="btn" style="width:100%" onclick="submitBooking()">
+      Confirm Appointment
+    </button>
+
+  </div>
+
+</div>
+
+<!-- SERVICE DETAILS -->
+
+<div class="modal" id="serviceModal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeServiceDetails()">×</button>
+
+    <div class="eyebrow" id="detailCategory"></div>
+    <h2 class="modal-title" id="detailName"></h2>
+
+    <div class="detail-price" id="detailPrice"></div>
+
+    <p class="modal-sub" id="detailDescription"></p>
+
+    <strong>What's included</strong>
+
+    <ul class="detail-list" id="detailList"></ul>
+
+    <div class="duration" id="detailDuration"></div>
+
+    <br>
+
+    <button class="btn" onclick="bookCurrentService()">
+      Book This Service
+    </button>
+
+  </div>
+
+</div>
+
+<!-- CONFIRMATION -->
+
+<div class="modal" id="confirmationModal">
+
+  <div class="modal-box confirmation">
+
+    <button class="close" onclick="closeConfirmation()">×</button>
+
+    <div class="confirm-icon">✓</div>
+
+    <div class="eyebrow">Appointment Confirmed</div>
+
+    <h2 class="modal-title">You're booked.</h2>
+
+    <p class="modal-sub" id="confirmationText"></p>
+
+    <div class="reference" id="confirmationReference"></div>
+
+    <div id="confirmationDetails"></div>
+
+    <br>
+
+    <button class="btn" onclick="printReceipt()">Print Receipt</button>
+
+    <button class="btn btn-outline" onclick="closeConfirmation()">Done</button>
+
+  </div>
+
+</div>
+
+<!-- GALLERY MODAL -->
+
+<div class="modal" id="galleryModal">
+
+  <div class="modal-box modal-large" style="padding:10px">
+
+    <button class="close" style="color:white;z-index:5" onclick="closeGallery()">×</button>
+
+    <div class="gallery-preview">
+      <button class="gallery-arrow left" onclick="galleryPrev()">‹</button>
+      <img id="galleryLargeImage" src="" alt="">
+      <button class="gallery-arrow right" onclick="galleryNext()">›</button>
+    </div>
+
+    <div class="gallery-counter" id="galleryCounter"></div>
+
+  </div>
+
+</div>
+
+<!-- WISHLIST -->
+
+<div class="modal" id="wishlistModal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeWishlist()">×</button>
+
+    <div class="eyebrow">Saved Services</div>
+    <h2 class="modal-title">Your favourites.</h2>
+    <p class="modal-sub">Services you've saved for later.</p>
+
+    <div class="wishlist-list" id="wishlistList"></div>
+
+  </div>
+
+</div>
+
+<!-- REVIEW MODAL -->
+
+<div class="modal" id="reviewModal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeReviewModal()">×</button>
+
+    <div class="eyebrow">Client Note</div>
+    <h2 class="modal-title">Share your experience.</h2>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input id="reviewName" placeholder="Your name">
+    </div>
+
+    <div class="form-group">
+      <label>Rating</label>
+      <select id="reviewRating">
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Your Review</label>
+      <textarea id="reviewText" placeholder="Tell us about your experience..."></textarea>
+    </div>
+
+    <button class="btn" style="width:100%" onclick="submitReview()">
+      Submit Review
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ADMIN LOGIN -->
+
+<div class="modal" id="loginModal">
+
+  <div class="modal-box login-box">
+
+    <button class="close" onclick="closeAdminLogin()">×</button>
+
+    <div class="login-logo">
+      <div class="eyebrow">Owner Access</div>
+      <h2>ÉLANE</h2>
+      <p class="modal-sub">Beauty Lounge Dashboard</p>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input id="adminEmail" type="email" value="owner@elane.com">
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input id="adminPassword" type="password">
+    </div>
+
+    <button class="btn" style="width:100%" onclick="adminLogin()">
+      Enter Dashboard
+    </button>
+
+    <p style="font-size:10px;color:#888;text-align:center;margin-top:15px">
+      Demo credentials: owner@elane.com / elane123
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ADMIN DASHBOARD -->
+
+<div class="admin" id="adminDashboard">
+
+  <div class="admin-nav">
+
+    <div class="admin-logo">ÉLANE · OWNER</div>
+
+    <div>
+      <button class="admin-btn" onclick="closeAdminDashboard()">View Website</button>
+      <button class="admin-btn" onclick="adminLogout()">Logout</button>
+    </div>
+
+  </div>
+
+  <div class="admin-main">
+
+    <div class="admin-head">
+
+      <div>
+        <div class="eyebrow">Owner Dashboard</div>
+        <h1>Good evening.</h1>
+      </div>
+
+      <div class="admin-actions">
+        <button class="admin-btn dark" onclick="openBooking()">+ New Appointment</button>
+        <button class="admin-btn" onclick="exportAppointments()">Export Bookings</button>
+      </div>
+
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <span>Today</span>
+        <strong id="statToday">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Upcoming</span>
+        <strong id="statUpcoming">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Confirmed</span>
+        <strong id="statConfirmed">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Cancelled</span>
+        <strong id="statCancelled">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Revenue</span>
+        <strong id="statRevenue">₹0</strong>
+      </div>
+
+    </div>
+
+    <div class="admin-tabs">
+
+      <button class="admin-tab active" onclick="switchAdminTab('appointments',this)">
+        Appointments
+      </button>
+
+      <button class="admin-tab" onclick="switchAdminTab('calendar',this)">
+        Calendar
+      </button>
+
+      <button class="admin-tab" onclick="switchAdminTab('services',this)">
+        Services
+      </button>
+
+      <button class="admin-tab" onclick="switchAdminTab('offers',this)">
+        Offers
+      </button>
+
+      <button class="admin-tab" onclick="switchAdminTab('reviews',this)">
+        Reviews
+      </button>
+
+      <button class="admin-tab" onclick="switchAdminTab('gallery',this)">
+        Gallery
+      </button>
+
+    </div>
+
+    <div class="admin-panel" id="adminContent"></div>
+
+  </div>
+
+</div>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+/* ================================
+   DATA
+================================ */
+
+const services = [
+
+  {
+    id:"haircut",
+    category:"Hair",
+    name:"Signature Haircut",
+    price:899,
+    duration:60,
+    description:"A personalised haircut finished with styling suited to your look.",
+    includes:["Consultation","Haircut","Wash","Finishing style"]
+  },
+
+  {
+    id:"hairspa",
+    category:"Hair",
+    name:"Hair Spa",
+    price:1299,
+    duration:60,
+    description:"A nourishing hair ritual designed for softness, shine and relaxation.",
+    includes:["Scalp massage","Hair treatment","Steam","Finishing"]
+  },
+
+  {
+    id:"blowdry",
+    category:"Hair",
+    name:"Blow Dry",
+    price:599,
+    duration:40,
+    description:"Smooth, polished styling for an effortlessly finished look.",
+    includes:["Hair preparation","Blow dry","Finishing"]
+  },
+
+  {
+    id:"glowfacial",
+    category:"Skin",
+    name:"Glow Facial",
+    price:1199,
+    duration:60,
+    description:"A refreshing facial ritual focused on a healthy-looking glow.",
+    includes:["Cleansing","Exfoliation","Massage","Mask","Finishing"]
+  },
+
+  {
+    id:"hydrating",
+    category:"Skin",
+    name:"Hydrating Facial",
+    price:1399,
+    duration:70,
+    description:"A soothing hydration-focused facial for a refreshed feel.",
+    includes:["Double cleanse","Hydration treatment","Massage","Mask"]
+  },
+
+  {
+    id:"deepclean",
+    category:"Skin",
+    name:"Deep Cleansing Facial",
+    price:999,
+    duration:55,
+    description:"A deep cleansing ritual designed for a fresh, clean finish.",
+    includes:["Cleansing","Exfoliation","Steam","Mask","Moisturising"]
+  },
+
+  {
+    id:"manicure",
+    category:"Nails",
+    name:"Classic Manicure",
+    price:499,
+    duration:40,
+    description:"A neat and polished manicure for beautifully cared-for hands.",
+    includes:["Nail shaping","Cuticle care","Hand massage","Polish"]
+  },
+
+  {
+    id:"gelmanicure",
+    category:"Nails",
+    name:"Gel Manicure",
+    price:899,
+    duration:60,
+    description:"Long-lasting gel colour with a clean, glossy finish.",
+    includes:["Nail prep","Cuticle care","Gel colour","Finishing"]
+  },
+
+  {
+    id:"pedicure",
+    category:"Nails",
+    name:"Classic Pedicure",
+    price:599,
+    duration:45,
+    description:"A relaxing foot-care ritual with a polished finish.",
+    includes:["Soak","Nail care","Foot scrub","Massage","Polish"]
+  },
+
+  {
+    id:"softglam",
+    category:"Makeup",
+    name:"Soft Glam Makeup",
+    price:1999,
+    duration:90,
+    description:"Elegant, polished makeup with a soft and refined finish.",
+    includes:["Skin preparation","Base","Eyes","Lips","Finishing"]
+  },
+
+  {
+    id:"party",
+    category:"Makeup",
+    name:"Party Makeup",
+    price:2499,
+    duration:100,
+    description:"A camera-ready look designed for celebrations and evenings.",
+    includes:["Skin preparation","Base","Eyes","Lips","Setting"]
+  },
+
+  {
+    id:"event",
+    category:"Makeup",
+    name:"Event Makeup",
+    price:2999,
+    duration:120,
+    description:"A complete event look tailored to your outfit and occasion.",
+    includes:["Consultation","Base","Eyes","Lips","Finishing"]
+  },
+
+  {
+    id:"bridal",
+    category:"Bridal",
+    name:"Bridal Makeup",
+    price:5999,
+    duration:150,
+    description:"A detailed bridal makeup experience designed around your special day.",
+    includes:["Consultation","Skin preparation","Bridal base","Eyes","Lips","Finishing"]
+  },
+
+  {
+    id:"engagement",
+    category:"Bridal",
+    name:"Engagement Makeup",
+    price:3499,
+    duration:120,
+    description:"A sophisticated makeup look for your engagement celebration.",
+    includes:["Consultation","Base","Eyes","Lips","Finishing"]
+  },
+
+  {
+    id:"bridalhair",
+    category:"Bridal",
+    name:"Bridal Hair Styling",
+    price:2499,
+    duration:90,
+    description:"Elegant hair styling designed to complement your bridal look.",
+    includes:["Hair preparation","Styling","Accessories placement","Finishing"]
+  }
+
+];
+
+const staff = [
+
+  {
+    id:"anaya",
+    name:"Anaya",
+    role:"Hair & Styling"
+  },
+
+  {
+    id:"meera",
+    name:"Meera",
+    role:"Skin & Nails"
+  },
+
+  {
+    id:"riya",
+    name:"Riya",
+    role:"Makeup & Bridal"
+  },
+
+  {
+    id:"isha",
+    name:"Isha",
+    role:"Beauty Specialist"
+  }
+
+];
+
+const timeSlots = [
+  "10:00 AM",
+  "10:30 AM",
+  "11:00 AM",
+  "11:30 AM",
+  "12:00 PM",
+  "12:30 PM",
+  "2:00 PM",
+  "2:30 PM",
+  "3:00 PM",
+  "3:30 PM",
+  "4:00 PM",
+  "4:30 PM",
+  "5:00 PM",
+  "5:30 PM",
+  "6:00 PM",
+  "6:30 PM"
+];
+
+const gallery = [
+
+  {
+    image:"https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85",
+    label:"The Studio"
+  },
+
+  {
+    image:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85",
+    label:"Beauty"
+  },
+
+  {
+    image:"https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=900&q=85",
+    label:"Details"
+  },
+
+  {
+    image:"https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85",
+    label:"Hair"
+  },
+
+  {
+    image:"https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=85",
+    label:"Nails"
+  },
+
+  {
+    image:"https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=85",
+    label:"Makeup"
+  },
+
+  {
+    image:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85",
+    label:"Skin"
+  }
+
+];
+
+const defaultReviews = [
+
+  {
+    name:"Aarohi",
+    rating:5,
+    text:"The whole experience felt calm, polished and genuinely personal."
+  },
+
+  {
+    name:"Mahi",
+    rating:5,
+    text:"Loved how carefully everything was explained before the service."
+  },
+
+  {
+    name:"Sana",
+    rating:5,
+    text:"Beautiful space, lovely service and such a thoughtful experience."
+  }
+
+];
+
+/* ================================
+   STORAGE
+================================ */
+
+let appointments =
+  JSON.parse(localStorage.getItem("elaneAppointments") || "[]");
+
+let savedReviews =
+  JSON.parse(localStorage.getItem("elaneReviews") || "null") || defaultReviews;
+
+let wishlist =
+  JSON.parse(localStorage.getItem("elaneWishlist") || "[]");
+
+let servicePrices =
+  JSON.parse(localStorage.getItem("elaneServicePrices") || "{}");
+
+let currentCategory="All";
+let currentService=null;
+let selectedSlot="";
+let selectedGallery=0;
+
+/* ================================
+   HELPERS
+================================ */
+
+function saveAll(){
+
+  localStorage.setItem(
+    "elaneAppointments",
+    JSON.stringify(appointments)
+  );
+
+  localStorage.setItem(
+    "elaneReviews",
+    JSON.stringify(savedReviews)
+  );
+
+  localStorage.setItem(
+    "elaneWishlist",
+    JSON.stringify(wishlist)
+  );
+
+  localStorage.setItem(
+    "elaneServicePrices",
+    JSON.stringify(servicePrices)
+  );
+
+}
+
+function getPrice(service){
+
+  return servicePrices[service.id] !== undefined
+    ? Number(servicePrices[service.id])
+    : service.price;
+
+}
+
+function getToday(){
+
+  const d=new Date();
+
+  const month=String(d.getMonth()+1).padStart(2,"0");
+  const day=String(d.getDate()).padStart(2,"0");
+
+  return `${d.getFullYear()}-${month}-${day}`;
+
+}
+
+function formatDate(date){
+
+  if(!date) return "";
+
+  const d=new Date(date+"T00:00:00");
+
+  return d.toLocaleDateString("en-IN",{
+    day:"2-digit",
+    month:"short",
+    year:"numeric"
+  });
+
+}
+
+function escapeHtml(text){
+
+  const div=document.createElement("div");
+
+  div.textContent=text;
+
+  return div.innerHTML;
+
+}
+
+function generateReference(){
+
+  return "ELA-"+Date.now().toString().slice(-7);
+
+}
+
+/* ================================
+   SERVICES
+================================ */
+
+function renderServices(){
+
+  const grid=document.getElementById("servicesGrid");
+
+  const list=currentCategory==="All"
+    ? services
+    : services.filter(s=>s.category===currentCategory);
+
+  grid.innerHTML=list.map(service=>{
+
+    const price=getPrice(service);
+    const isSaved=wishlist.includes(service.id);
+
+    return `
+
+      <article class="service-card">
+
+        <div class="service-top">
+
+          <span class="service-category">
+            ${service.category}
+          </span>
+
+          <button
+            class="icon-btn"
+            onclick="toggleWishlist('${service.id}')"
+            title="Save service">
+            ${isSaved?"♥":"♡"}
+          </button>
+
+        </div>
+
+        <h3>${service.name}</h3>
+
+        <p>${service.description}</p>
+
+        <div class="price">₹${price.toLocaleString("en-IN")}</div>
+
+        <div class="duration">${service.duration} minutes</div>
+
+        <div class="card-actions">
+
+          <button
+            class="small-btn alt"
+            onclick="openServiceDetails('${service.id}')">
+            Details
+          </button>
+
+          <button
+            class="small-btn"
+            onclick="openBooking('${service.id}')">
+            Book
+          </button>
+
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+}
+
+function filterServices(category,button){
+
+  currentCategory=category;
+
+  document.querySelectorAll(".filter")
+    .forEach(b=>b.classList.remove("active"));
+
+  button.classList.add("active");
+
+  renderServices();
+
+}
+
+function openServiceDetails(id){
+
+  const service=services.find(s=>s.id===id);
+
+  if(!service) return;
+
+  currentService=id;
+
+  document.getElementById("detailCategory").textContent=service.category;
+
+  document.getElementById("detailName").textContent=service.name;
+
+  document.getElementById("detailPrice").textContent=
+    "₹"+getPrice(service).toLocaleString("en-IN");
+
+  document.getElementById("detailDescription").textContent=
+    service.description;
+
+  document.getElementById("detailDuration").textContent=
+    "Approx. "+service.duration+" minutes";
+
+  document.getElementById("detailList").innerHTML=
+    service.includes.map(x=>`<li>${x}</li>`).join("");
+
+  document.getElementById("serviceModal").classList.add("show");
+
+}
+
+function closeServiceDetails(){
+
+  document.getElementById("serviceModal").classList.remove("show");
+
+}
+
+function bookCurrentService(){
+
+  closeServiceDetails();
+
+  openBooking(currentService);
+
+}
+
+/* ================================
+   BOOKING
+================================ */
+
+function openBooking(serviceId=null){
+
+  closeAdminDashboard();
+
+  document.getElementById("bookingModal").classList.add("show");
+
+  populateBookingServices(serviceId);
+
+  populateStaff();
+
+  const dateInput=document.getElementById("bookingDate");
+
+  dateInput.min=getToday();
+
+  if(!dateInput.value){
+    dateInput.value=getToday();
+  }
+
+  selectedSlot="";
+
+  renderSlots();
+
+}
+
+function closeBooking(){
+
+  document.getElementById("bookingModal").classList.remove("show");
+
+}
+
+function populateBookingServices(serviceId=null){
+
+  const select=document.getElementById("bookingService");
+
+  select.innerHTML=services.map(s=>`
+
+    <option value="${s.id}" ${serviceId===s.id?"selected":""}>
+      ${s.name} — ₹${getPrice(s).toLocaleString("en-IN")}
+    </option>
+
+  `).join("");
+
+}
+
+function populateStaff(){
+
+  const select=document.getElementById("bookingStaff");
+
+  select.innerHTML=staff.map(s=>`
+
+    <option value="${s.id}">
+      ${s.name} — ${s.role}
+    </option>
+
+  `).join("");
+
+}
+
+function bookingServiceChanged(){
+
+  selectedSlot="";
+
+  renderSlots();
+
+}
+
+function renderSlots(){
+
+  const container=document.getElementById("slots");
+
+  if(!container) return;
+
+  const date=document.getElementById("bookingDate").value;
+
+  const staffId=document.getElementById("bookingStaff").value;
+
+  const serviceId=document.getElementById("bookingService").value;
+
+  if(!date){
+
+    container.innerHTML="<p style='color:#888;font-size:11px'>Choose a date first.</p>";
+
+    return;
+
+  }
+
+  const now=new Date();
+
+  const selectedDate=new Date(date+"T00:00:00");
+
+  const today=getToday();
+
+  container.innerHTML=timeSlots.map(slot=>{
+
+    const isBooked=appointments.some(a=>
+      a.date===date &&
+      a.time===slot &&
+      a.staff===staffId &&
+      a.status==="confirmed"
+    );
+
+    let past=false;
+
+    if(date===today){
+
+      const match=slot.match(/(\d+):(\d+) (AM|PM)/);
+
+      if(match){
+
+        let hour=Number(match[1]);
+        let minute=Number(match[2]);
+
+        if(match[3]==="PM" && hour!==12) hour+=12;
+        if(match[3]==="AM" && hour===12) hour=0;
+
+        if(hour<now.getHours() ||
+          (hour===now.getHours() && minute<=now.getMinutes())){
+          past=true;
+        }
+
+      }
+
+    }
+
+    const disabled=isBooked||past;
+
+    return `
+
+      <button
+        class="slot ${selectedSlot===slot?"selected":""} ${disabled?"disabled":""}"
+        ${disabled?"disabled":""}
+        onclick="selectSlot('${slot}')">
+        ${slot}
+      </button>
+
+    `;
+
+  }).join("");
+
+}
+
+function selectSlot(slot){
+
+  selectedSlot=slot;
+
+  renderSlots();
+
+}
+
+function submitBooking(){
+
+  const serviceId=document.getElementById("bookingService").value;
+
+  const service=services.find(s=>s.id===serviceId);
+
+  const staffId=document.getElementById("bookingStaff").value;
+
+  const selectedStaff=staff.find(s=>s.id===staffId);
+
+  const name=document.getElementById("bookingName").value.trim();
+
+  const phone=document.getElementById("bookingPhone").value.trim();
+
+  const email=document.getElementById("bookingEmail").value.trim();
+
+  const date=document.getElementById("bookingDate").value;
+
+  const note=document.getElementById("bookingNote").value.trim();
+
+  if(!name || !phone || !date || !selectedSlot){
+
+    toast("Please complete your details and choose a time.");
+
+    return;
+
+  }
+
+  const duplicate=appointments.some(a=>
+    a.date===date &&
+    a.time===selectedSlot &&
+    a.staff===staffId &&
+    a.status==="confirmed"
+  );
+
+  if(duplicate){
+
+    toast("That slot was just booked. Please choose another.");
+
+    renderSlots();
+
+    return;
+
+  }
+
+  const appointment={
+
+    id:Date.now(),
+
+    reference:generateReference(),
+
+    customerName:name,
+
+    phone:phone,
+
+    email:email,
+
+    service:service.name,
+
+    serviceId:service.id,
+
+    staff:staffId,
+
+    staffName:selectedStaff.name,
+
+    date:date,
+
+    time:selectedSlot,
+
+    note:note,
+
+    price:getPrice(service),
+
+    duration:service.duration,
+
+    status:"confirmed",
+
+    createdAt:new Date().toISOString()
+
+  };
+
+  appointments.push(appointment);
+
+  saveAll();
+
+  closeBooking();
+
+  showConfirmation(appointment);
+
+}
+
+function showConfirmation(a){
+
+  document.getElementById("confirmationText").textContent=
+    `${a.customerName}, your appointment has been reserved.`;
+
+  document.getElementById("confirmationReference").textContent=
+    a.reference;
+
+  document.getElementById("confirmationDetails").innerHTML=`
+
+    <p><strong>${escapeHtml(a.service)}</strong></p>
+
+    <p>${formatDate(a.date)} · ${a.time}</p>
+
+    <p>with ${escapeHtml(a.staffName)}</p>
+
+    <p style="margin-top:8px">
+      ₹${a.price.toLocaleString("en-IN")}
+    </p>
+
+  `;
+
+  document.getElementById("confirmationModal").classList.add("show");
+
+}
+
+function closeConfirmation(){
+
+  document.getElementById("confirmationModal").classList.remove("show");
+
+}
+
+function bookPackage(){
+
+  openBooking("glowfacial");
+
+  toast("Package starts with Glow Facial. Mention the ÉLANE Glow Ritual in your notes.");
+
+}
+
+/* ================================
+   RECEIPT
+================================ */
+
+function printReceipt(){
+
+  const ref=document.getElementById("confirmationReference").textContent;
+
+  const a=appointments.find(x=>x.reference===ref);
+
+  if(!a) return;
+
+  const win=window.open("","_blank");
+
+  win.document.write(`
+
+    <html>
+
+    <head>
+
+      <title>${a.reference} · ÉLANE</title>
+
+      <style>
+
+        body{
+          font-family:Arial,sans-serif;
+          max-width:600px;
+          margin:50px auto;
+          padding:30px;
+          color:#292321;
+        }
+
+        h1{
+          font-family:Georgia,serif;
+          letter-spacing:5px;
+        }
+
+        .line{
+          border-top:1px solid #ddd;
+          margin:20px 0;
+        }
+
+        .ref{
+          background:#f2ebe6;
+          padding:15px;
+          font-weight:bold;
+          letter-spacing:2px;
+        }
+
+        p{
+          line-height:1.7;
+        }
+
+      </style>
+
+    </head>
+
+    <body>
+
+      <h1>ÉLANE</h1>
+      <p>BEAUTY LOUNGE</p>
+
+      <div class="line"></div>
+
+      <div class="ref">${a.reference}</div>
+
+      <div class="line"></div>
+
+      <p><strong>Guest:</strong> ${escapeHtml(a.customerName)}</p>
+      <p><strong>Service:</strong> ${escapeHtml(a.service)}</p>
+      <p><strong>Professional:</strong> ${escapeHtml(a.staffName)}</p>
+      <p><strong>Date:</strong> ${formatDate(a.date)}</p>
+      <p><strong>Time:</strong> ${a.time}</p>
+      <p><strong>Amount:</strong> ₹${a.price.toLocaleString("en-IN")}</p>
+
+      <div class="line"></div>
+
+      <p>Thank you for choosing ÉLANE.</p>
+
+    </body>
+
+    </html>
+
+  `);
+
+  win.document.close();
+
+  win.print();
+
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+function renderGallery(){
+
+  const grid=document.getElementById("galleryGrid");
+
+  grid.innerHTML=gallery.map((item,index)=>`
+
+    <div class="gallery-item" onclick="openGallery(${index})">
+
+      <img src="${item.image}" alt="${item.label}">
+
+      <div class="gallery-label">${item.label}</div>
+
+    </div>
+
+  `).join("");
+
+}
+
+function openGallery(index){
+
+  selectedGallery=index;
+
+  updateGallery();
+
+  document.getElementById("galleryModal").classList.add("show");
+
+}
+
+function updateGallery(){
+
+  const item=gallery[selectedGallery];
+
+  document.getElementById("galleryLargeImage").src=item.image;
+
+  document.getElementById("galleryLargeImage").alt=item.label;
+
+  document.getElementById("galleryCounter").textContent=
+    `${selectedGallery+1} / ${gallery.length} · ${item.label}`;
+
+}
+
+function closeGallery(){
+
+  document.getElementById("galleryModal").classList.remove("show");
+
+}
+
+function galleryNext(){
+
+  selectedGallery=(selectedGallery+1)%gallery.length;
+
+  updateGallery();
+
+}
+
+function galleryPrev(){
+
+  selectedGallery=
+    (selectedGallery-1+gallery.length)%gallery.length;
+
+  updateGallery();
+
+}
+
+/* ================================
+   WISHLIST
+================================ */
+
+function toggleWishlist(id){
+
+  if(wishlist.includes(id)){
+
+    wishlist=wishlist.filter(x=>x!==id);
+
+    toast("Removed from favourites.");
+
+  }else{
+
+    wishlist.push(id);
+
+    toast("Saved to favourites.");
+
+  }
+
+  saveAll();
+
+  renderServices();
+
+  updateWishlistBadge();
+
+}
+
+function updateWishlistBadge(){
+
+  document.getElementById("wishBadge").textContent=wishlist.length;
+
+}
+
+function openWishlist(){
+
+  const container=document.getElementById("wishlistList");
+
+  if(wishlist.length===0){
+
+    container.innerHTML=`
+
+      <p style="color:#888;font-size:13px">
+        You haven't saved any services yet.
+      </p>
+
+    `;
+
+  }else{
+
+    container.innerHTML=wishlist.map(id=>{
+
+      const s=services.find(x=>x.id===id);
+
+      return `
+
+        <div class="wish-item">
+
+          <div>
+
+            <strong>${s.name}</strong>
+
+            <span>${s.category} · ₹${getPrice(s).toLocaleString("en-IN")}</span>
+
+          </div>
+
+          <button class="small-btn" onclick="openBooking('${s.id}');closeWishlist()">
+            Book
+          </button>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+  }
+
+  document.getElementById("wishlistModal").classList.add("show");
+
+}
+
+function closeWishlist(){
+
+  document.getElementById("wishlistModal").classList.remove("show");
+
+}
+
+/* ================================
+   REVIEWS
+================================ */
+
+function renderReviews(){
+
+  const grid=document.getElementById("reviewsGrid");
+
+  grid.innerHTML=savedReviews.slice(0,6).map(r=>`
+
+    <article class="review">
+
+      <div class="stars">
+        ${"★".repeat(Number(r.rating))}
+        ${"☆".repeat(5-Number(r.rating))}
+      </div>
+
+      <p>"${escapeHtml(r.text)}"</p>
+
+      <div class="review-name">
+        — ${escapeHtml(r.name)}
+      </div>
+
+    </article>
+
+  `).join("");
+
+}
+
+function openReviewModal(){
+
+  document.getElementById("reviewModal").classList.add("show");
+
+}
+
+function closeReviewModal(){
+
+  document.getElementById("reviewModal").classList.remove("show");
+
+}
+
+function submitReview(){
+
+  const name=document.getElementById("reviewName").value.trim();
+
+  const rating=Number(document.getElementById("reviewRating").value);
+
+  const text=document.getElementById("reviewText").value.trim();
+
+  if(!name || !text){
+
+    toast("Please enter your name and review.");
+
+    return;
+
+  }
+
+  savedReviews.unshift({
+    name,
+    rating,
+    text
+  });
+
+  saveAll();
+
+  renderReviews();
+
+  closeReviewModal();
+
+  document.getElementById("reviewName").value="";
+  document.getElementById("reviewText").value="";
+
+  toast("Thank you for your review.");
+
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+function toggleMobileMenu(){
+
+  document.getElementById("navLinks")
+    .classList.toggle("open");
+
+}
+
+function closeMobileMenu(){
+
+  document.getElementById("navLinks")
+    .classList.remove("open");
+
+}
+
+/* ================================
+   ADMIN LOGIN
+================================ */
+
+function openAdminLogin(){
+
+  document.getElementById("loginModal").classList.add("show");
+
+}
+
+function closeAdminLogin(){
+
+  document.getElementById("loginModal").classList.remove("show");
+
+}
+
+function adminLogin(){
+
+  const email=document.getElementById("adminEmail").value.trim();
+
+  const password=document.getElementById("adminPassword").value;
+
+  if(email==="owner@elane.com" && password==="elane123"){
+
+    sessionStorage.setItem("elaneAdmin","true");
+
+    closeAdminLogin();
+
+    showAdminDashboard();
+
+  }else{
+
+    toast("Incorrect demo login.");
+
+  }
+
+}
+
+function adminLogout(){
+
+  sessionStorage.removeItem("elaneAdmin");
+
+  closeAdminDashboard();
+
+}
+
+function showAdminDashboard(){
+
+  document.getElementById("adminDashboard").classList.add("show");
+
+  updateAdminStats();
+
+  renderAdminTable();
+
+}
+
+function closeAdminDashboard(){
+
+  document.getElementById("adminDashboard").classList.remove("show");
+
+}
+
+/* ================================
+   ADMIN STATS
+================================ */
+
+function updateAdminStats(){
+
+  const today=getToday();
+
+  const todayCount=appointments.filter(a=>
+    a.date===today &&
+    a.status==="confirmed"
+  ).length;
+
+  const upcoming=appointments.filter(a=>
+    a.date>=today &&
+    a.status==="confirmed"
+  ).length;
+
+  const confirmed=appointments.filter(a=>
+    a.status==="confirmed"
+  ).length;
+
+  const cancelled=appointments.filter(a=>
+    a.status==="cancelled"
+  ).length;
+
+  const revenue=appointments
+    .filter(a=>a.status==="confirmed")
+    .reduce((sum,a)=>sum+Number(a.price),0);
+
+  document.getElementById("statToday").textContent=todayCount;
+
+  document.getElementById("statUpcoming").textContent=upcoming;
+
+  document.getElementById("statConfirmed").textContent=confirmed;
+
+  document.getElementById("statCancelled").textContent=cancelled;
+
+  document.getElementById("statRevenue").textContent=
+    "₹"+revenue.toLocaleString("en-IN");
+
+}
+
+/* ================================
+   ADMIN TABS
+================================ */
+
+function switchAdminTab(tab,button){
+
+  document.querySelectorAll(".admin-tab")
+    .forEach(x=>x.classList.remove("active"));
+
+  button.classList.add("active");
+
+  if(tab==="appointments") renderAdminTable();
+
+  if(tab==="calendar") renderCalendar();
+
+  if(tab==="services") renderServiceManagement();
+
+  if(tab==="offers") renderOfferManagement();
+
+  if(tab==="reviews") renderReviewManagement();
+
+  if(tab==="gallery") renderGalleryManagement();
+
+}
+
+/* ================================
+   APPOINTMENT MANAGEMENT
+================================ */
+
+function renderAdminTable(){
+
+  const content=document.getElementById("adminContent");
+
+  content.innerHTML=`
+
+    <div class="admin-filters">
+
+      <input
+        id="adminSearch"
+        placeholder="Search client, phone or reference..."
+        oninput="renderAppointmentRows()">
+
+      <input
+        id="adminDateFilter"
+        type="date"
+        onchange="renderAppointmentRows()">
+
+      <select id="adminStatusFilter" onchange="renderAppointmentRows()">
+
+        <option value="all">All Status</option>
+        <option value="confirmed">Confirmed</option>
+        <option value="cancelled">Cancelled</option>
+
+      </select>
+
+    </div>
+
+    <div class="table-wrap">
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Reference</th>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Professional</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="appointmentRows"></tbody>
+
+      </table>
+
+    </div>
+
+  `;
+
+  renderAppointmentRows();
+
+}
+
+function renderAppointmentRows(){
+
+  const body=document.getElementById("appointmentRows");
+
+  if(!body) return;
+
+  const search=
+    (document.getElementById("adminSearch")?.value || "")
+    .toLowerCase();
+
+  const date=
+    document.getElementById("adminDateFilter")?.value || "";
+
+  const status=
+    document.getElementById("adminStatusFilter")?.value || "all";
+
+  const filtered=appointments.filter(a=>{
+
+    const matchesSearch=
+      !search ||
+      a.customerName.toLowerCase().includes(search) ||
+      a.phone.toLowerCase().includes(search) ||
+      a.reference.toLowerCase().includes(search);
+
+    const matchesDate=!date || a.date===date;
+
+    const matchesStatus=status==="all" || a.status===status;
+
+    return matchesSearch && matchesDate && matchesStatus;
+
+  });
+
+  const sorted=[...filtered].sort((a,b)=>
+    (a.date+a.time).localeCompare(b.date+b.time)
+  );
+
+  if(sorted.length===0){
+
+    body.innerHTML=`
+
+      <tr>
+        <td colspan="9" style="text-align:center;color:#888;padding:30px">
+          No appointments found.
+        </td>
+      </tr>
+
+    `;
+
+    return;
+
+  }
+
+  body.innerHTML=sorted.map(a=>`
+
+    <tr>
+
+      <td><strong>${a.reference}</strong></td>
+
+      <td>
+        ${escapeHtml(a.customerName)}
+        <br>
+        <span style="color:#888">${escapeHtml(a.phone)}</span>
+      </td>
+
+      <td>${escapeHtml(a.service)}</td>
+
+      <td>${escapeHtml(a.staffName)}</td>
+
+      <td>${formatDate(a.date)}</td>
+
+      <td>${a.time}</td>
+
+      <td>₹${Number(a.price).toLocaleString("en-IN")}</td>
+
+      <td>
+        <span class="status ${a.status}">
+          ${a.status}
+        </span>
+      </td>
+
+      <td>
+
+        <button class="action-btn" onclick="viewAppointment('${a.reference}')">
+          View
+        </button>
+
+        ${
+          a.status==="confirmed"
+          ? `
+            <button class="action-btn danger"
+              onclick="cancelAppointment('${a.reference}')">
+              Cancel
+            </button>
+          `
+          : ""
+        }
+
+      </td>
+
+    </tr>
+
+  `).join("");
+
+}
+
+function viewAppointment(reference){
+
+  const a=appointments.find(x=>x.reference===reference);
+
+  if(!a) return;
+
+  alert(
+`ÉLANE APPOINTMENT
+
+Reference: ${a.reference}
+Client: ${a.customerName}
+Phone: ${a.phone}
+Email: ${a.email || "-"}
+Service: ${a.service}
+Professional: ${a.staffName}
+Date: ${formatDate(a.date)}
+Time: ${a.time}
+Amount: ₹${a.price}
+Status: ${a.status}
+
+Notes:
+${a.note || "No notes"}`
+  );
+
+}
+
+function cancelAppointment(reference){
+
+  const a=appointments.find(x=>x.reference===reference);
+
+  if(!a) return;
+
+  if(!confirm("Cancel this appointment?")) return;
+
+  a.status="cancelled";
+
+  saveAll();
+
+  updateAdminStats();
+
+  renderAppointmentRows();
+
+  toast("Appointment cancelled.");
+
+}
+
+/* ================================
+   CALENDAR
+================================ */
+
+function renderCalendar(){
+
+  const content=document.getElementById("adminContent");
+
+  const today=getToday();
+
+  const dates=[];
+
+  for(let i=0;i<14;i++){
+
+    const d=new Date();
+
+    d.setDate(d.getDate()+i);
+
+    const date=
+      d.getFullYear()+"-"+
+      String(d.getMonth()+1).padStart(2,"0")+"-"+
+      String(d.getDate()).padStart(2,"0");
+
+    dates.push(date);
+
+  }
+
+  content.innerHTML=`
+
+    <div class="eyebrow">Next 14 Days</div>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:35px;font-weight:500;margin-bottom:20px">
+      Appointment Calendar
+    </h2>
+
+    <div class="management-grid">
+
+      ${dates.map(date=>{
+
+        const dayAppointments=appointments.filter(a=>
+          a.date===date &&
+          a.status==="confirmed"
+        );
+
+        return `
+
+          <div class="management-card">
+
+            <div class="eyebrow">${formatDate(date)}</div>
+
+            <h3>
+              ${dayAppointments.length}
+              appointment${dayAppointments.length===1?"":"s"}
+            </h3>
+
+            ${
+              dayAppointments.length===0
+              ? `<p style="font-size:11px;color:#888;margin-top:8px">No bookings</p>`
+              : dayAppointments.map(a=>`
+
+                <div style="
+                  border-top:1px solid #eee;
+                  margin-top:10px;
+                  padding-top:10px;
+                  font-size:11px">
+
+                  <strong>${a.time}</strong>
+                  · ${escapeHtml(a.customerName)}
+
+                  <br>
+
+                  <span style="color:#888">
+                    ${escapeHtml(a.service)} · ${escapeHtml(a.staffName)}
+                  </span>
+
+                </div>
+
+              `).join("")
+            }
+
+          </div>
+
+        `;
+
+      }).join("")}
+
+    </div>
+
+  `;
+
+}
+
+/* ================================
+   SERVICE MANAGEMENT
+================================ */
+
+function renderServiceManagement(){
+
+  const content=document.getElementById("adminContent");
+
+  content.innerHTML=`
+
+    <div class="eyebrow">Pricing</div>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:35px;font-weight:500;margin-bottom:20px">
+      Service Management
+    </h2>
+
+    <div class="management-grid">
+
+      ${services.map(s=>`
+
+        <div class="management-card">
+
+          <div class="service-category">${s.category}</div>
+
+          <h3>${s.name}</h3>
+
+          <input
+            type="number"
+            id="price-${s.id}"
+            value="${getPrice(s)}">
+
+          <button
+            class="admin-btn dark"
+            onclick="saveServicePrice('${s.id}')">
+            Save Price
+          </button>
+
+        </div>
+
+      `).join("")}
+
+    </div>
+
+  `;
+
+}
+
+function saveServicePrice(id){
+
+  const input=document.getElementById("price-"+id);
+
+  const price=Number(input.value);
+
+  if(!price || price<0){
+
+    toast("Enter a valid price.");
+
+    return;
+
+  }
+
+  servicePrices[id]=price;
+
+  saveAll();
+
+  renderServices();
+
+  toast("Service price updated.");
+
+}
+
+/* ================================
+   OFFERS MANAGEMENT
+================================ */
+
+function renderOfferManagement(){
+
+  const content=document.getElementById("adminContent");
+
+  content.innerHTML=`
+
+    <div class="eyebrow">Packages</div>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:35px;font-weight:500;margin-bottom:20px">
+      Offers & Packages
+    </h2>
+
+    <div class="management-grid">
+
+      <div class="management-card">
+
+        <div class="eyebrow">Featured</div>
+
+        <h3>ÉLANE Glow Ritual</h3>
+
+        <p style="color:#888;font-size:12px;margin:10px 0">
+          Glow Facial + Classic Manicure + Blow Dry
+        </p>
+
+        <strong>₹2,299</strong>
+
+      </div>
+
+      <div class="management-card">
+
+        <div class="eyebrow">Occasion</div>
+
+        <h3>Event Ready</h3>
+
+        <p style="color:#888;font-size:12px;margin:10px 0">
+          Party Makeup + Blow Dry
+        </p>
+
+        <strong>₹2,799</strong>
+
+      </div>
+
+      <div class="management-card">
+
+        <div class="eyebrow">Bridal</div>
+
+        <h3>Bridal Preview</h3>
+
+        <p style="color:#888;font-size:12px;margin:10px 0">
+          Consultation + Makeup Trial
+        </p>
+
+        <strong>₹2,499</strong>
+
+      </div>
+
+      <div class="management-card">
+
+        <div class="eyebrow">Self Care</div>
+
+        <h3>Weekend Reset</h3>
+
+        <p style="color:#888;font-size:12px;margin:10px 0">
+          Hair Spa + Glow Facial
+        </p>
+
+        <strong>₹2,199</strong>
+
+      </div>
+
+    </div>
+
+    <p style="margin-top:20px;font-size:11px;color:#888">
+      Package editing can be connected to a database in the production version.
+    </p>
+
+  `;
+
+}
+
+/* ================================
+   REVIEW MANAGEMENT
+================================ */
+
+function renderReviewManagement(){
+
+  const content=document.getElementById("adminContent");
+
+  content.innerHTML=`
+
+    <div class="eyebrow">Customer Feedback</div>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:35px;font-weight:500;margin-bottom:20px">
+      Reviews
+    </h2>
+
+    <div class="management-grid">
+
+      ${savedReviews.map((r,index)=>`
+
+        <div class="management-card">
+
+          <div class="stars">
+            ${"★".repeat(Number(r.rating))}
+          </div>
+
+          <h3>${escapeHtml(r.name)}</h3>
+
+          <p style="font-size:12px;color:#777;margin:10px 0">
+            ${escapeHtml(r.text)}
+          </p>
+
+          <button
+            class="action-btn danger"
+            onclick="deleteReview(${index})">
+            Remove Review
+          </button>
+
+        </div>
+
+      `).join("")}
+
+    </div>
+
+  `;
+
+}
+
+function deleteReview(index){
+
+  if(!confirm("Remove this review?")) return;
+
+  savedReviews.splice(index,1);
+
+  saveAll();
+
+  renderReviews();
+
+  renderReviewManagement();
+
+  toast("Review removed.");
+
+}
+
+/* ================================
+   GALLERY MANAGEMENT
+================================ */
+
+function renderGalleryManagement(){
+
+  const content=document.getElementById("adminContent");
+
+  content.innerHTML=`
+
+    <div class="eyebrow">Visual Identity</div>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:35px;font-weight:500;margin-bottom:20px">
+      Gallery
+    </h2>
+
+    <div class="management-grid">
+
+      ${gallery.map((item,index)=>`
+
+        <div class="management-card">
+
+          <img
+            src="${item.image}"
+            style="height:160px;object-fit:cover;margin-bottom:12px">
+
+          <h3>${item.label}</h3>
+
+          <button
+            class="action-btn"
+            onclick="openGallery(${index})">
+            Preview
+          </button>
+
+        </div>
+
+      `).join("")}
+
+    </div>
+
+  `;
+
+}
+
+/* ================================
+   EXPORT
+================================ */
+
+function exportAppointments(){
+
+  if(appointments.length===0){
+
+    toast("No appointments to export.");
+
+    return;
+
+  }
+
+  const headers=[
+    "Reference",
+    "Customer",
+    "Phone",
+    "Email",
+    "Service",
+    "Professional",
+    "Date",
+    "Time",
+    "Price",
+    "Status",
+    "Notes"
+  ];
+
+  const rows=appointments.map(a=>[
+    a.reference,
+    a.customerName,
+    a.phone,
+    a.email,
+    a.service,
+    a.staffName,
+    a.date,
+    a.time,
+    a.price,
+    a.status,
+    a.note
+  ]);
+
+  const csv=[
+    headers,
+    ...rows
+  ].map(row=>
+    row.map(value=>
+      `"${String(value || "").replace(/"/g,'""')}"`
+    ).join(",")
+  ).join("\n");
+
+  const blob=new Blob([csv],{
+    type:"text/csv;charset=utf-8;"
+  });
+
+  const url=URL.createObjectURL(blob);
+
+  const a=document.createElement("a");
+
+  a.href=url;
+  a.download="elane-appointments.csv";
+
+  a.click();
+
+  URL.revokeObjectURL(url);
+
+  toast("Appointments exported.");
+
+}
+
+/* ================================
+   TOAST
+================================ */
+
+function toast(message){
+
+  const el=document.getElementById("toast");
+
+  el.textContent=message;
+
+  el.classList.add("show");
+
+  clearTimeout(window.toastTimer);
+
+  window.toastTimer=setTimeout(()=>{
+    el.classList.remove("show");
+  },2600);
+
+}
+
+/* ================================
+   KEYBOARD
+================================ */
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape"){
+
+    closeBooking();
+    closeServiceDetails();
+    closeConfirmation();
+    closeGallery();
+    closeWishlist();
+    closeReviewModal();
+    closeAdminLogin();
+
+  }
+
+  if(
+    e.ctrlKey &&
+    e.shiftKey &&
+    e.key.toLowerCase()==="a"
+  ){
+
+    e.preventDefault();
+
+    openAdminLogin();
+
+  }
+
+  if(
+    document.getElementById("galleryModal").classList.contains("show")
+  ){
+
+    if(e.key==="ArrowRight") galleryNext();
+
+    if(e.key==="ArrowLeft") galleryPrev();
+
+  }
+
+});
+
+/* ================================
+   INIT
+================================ */
+
+renderServices();
+
+renderGallery();
+
+renderReviews();
+
+updateWishlistBadge();
+
+if(sessionStorage.getItem("elaneAdmin")==="true"){
+  showAdminDashboard();
+}
+
+</script>
+
+</body>
+</html>
+ 
